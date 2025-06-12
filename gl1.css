@@ -1,0 +1,243 @@
+/* Bestehendes Design bleibt unverändert */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ffffff;
+  color: #000000;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+form {
+  background-color: #f0f4f8;
+  padding: 30px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #003366;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  color: #333333;
+  font-size: 14px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #a0bcd5;
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus {
+  border-color: #4682b4;
+  outline: none;
+}
+
+.custom-select {
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.selected {
+  border: 1px solid #a0bcd5;
+  padding: 10px 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.selected:hover {
+  background-color: #e6f0fa;
+}
+
+.selected img {
+  width: 24px;
+  height: 18px;
+  border: 1px solid #ccc;
+}
+
+.options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  max-height: 300px;
+  overflow-y: auto;
+  border: 1px solid #a0bcd5;
+  background-color: #ffffff;
+  z-index: 1000;
+  display: none;
+  border-radius: 6px;
+  margin-top: 5px;
+}
+
+.option {
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  color: #000000;
+}
+
+.option:hover {
+  background-color: #dbeaf7;
+}
+
+.option img {
+  width: 24px;
+  height: 18px;
+}
+
+.search-box {
+  padding: 10px;
+  border-bottom: 1px solid #c3d6e9;
+  background-color: #f0f4f8;
+  position: sticky;
+  top: 0;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #a0bcd5;
+  border-radius: 4px;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.no-results {
+  padding: 15px;
+  text-align: center;
+  color: #999999;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 25px;
+  flex-wrap: wrap;
+}
+
+.button {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+  min-width: 120px;
+  text-align: center;
+}
+
+.button.primary {
+  background-color: #1e60a6;
+  color: #ffffff;
+}
+
+.button.primary:hover {
+  background-color: #0f4a8a;
+}
+
+.button.secondary {
+  background-color: #ffffff;
+  color: #1e60a6;
+  border: 1px solid #1e60a6;
+}
+
+.button.secondary:hover {
+  background-color: #e6f0fa;
+}
+
+.footer {
+  margin-top: 20px;
+  font-size: 13px;
+  padding: 10px 20px;
+  background-color: #f0f4f8;
+  color: #333333;
+  border: 1px solid #a0bcd5;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* 📱 Smartphone-Optimierung */
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  form {
+    padding: 20px;
+    width: 100%;
+    max-width: 100%;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  label {
+    font-size: 13px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"] {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .button {
+    width: 100%;
+    min-width: auto;
+    font-size: 16px;
+    padding: 14px;
+  }
+
+  .button-group {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .selected {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .footer {
+    font-size: 12px;
+    padding: 10px;
+  }
+}
+

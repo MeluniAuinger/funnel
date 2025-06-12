@@ -1,0 +1,147 @@
+/* Allgemeine Stile */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #ffffff;
+    color: #111111;
+    margin: 0;
+    padding: 2rem;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Header */
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.highlight {
+    color: #007bff;
+    font-weight: 600;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.intro-list {
+    padding-left: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.intro-list li {
+    margin-bottom: 0.5rem;
+    color: #333333;
+    font-size: 16px;
+}
+
+/* Video */
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    margin-top: 1rem;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Bewerbungsbereich */
+.application {
+    background-color: #f4f7fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #dce3ec;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.application h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.application ul {
+    padding-left: 1.5rem;
+}
+
+.application li {
+    margin-bottom: 0.75rem;
+    font-size: 16px;
+    color: #000000;
+}
+
+/* Divider */
+.divider {
+    height: 1px;
+    background-color: #dce3ec;
+    margin: 2rem 0;
+}
+
+/* Button */
+.apply-button {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.apply-button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    body {
+        padding: 1rem;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .intro-list li,
+    .application li {
+        font-size: 14px;
+    }
+
+    .application {
+        padding: 1rem;
+    }
+
+    .application h2 {
+        font-size: 1.2rem;
+    }
+
+    .apply-button {
+        padding: 0.9rem;
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Transformation Challenge</title>
+  <link rel="stylesheet" href="/call-screen/call-screen.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="text-block">
+      <h2 class="headline">🎯 Sehr starke Entscheidung!</h2>
+      <p class="subline">Schau dir das kurze Video an, bevor du dich bewirbsttt!</p>
+    </div>
+
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/z0kg22h94kE"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+    </div>
+<div class="progress-bar-container">
+  <div class="progress-bar-wrapper">
+    <div class="progress-bar-fill"></div>
+  </div>
+  <div class="progress-label-side">75%</div>
+</div>
+
+
+
+<p class="motiv-intro">Nur noch eine Frage, dann hast du es geschafft!</p>
+
+
+<div class="down-arrow">⬇️</div> <!-- NEU: Pfeil nach unten -->
+
+
+
+    <h2 class="question">Wie motiviert bist du wirklich, dich zu transformieren?</h2>
+
+    <div class="slider-wrapper">
+      <div class="value-bubble" id="valueBubble">5</div>
+      <input type="range" id="motivationSlider" min="1" max="10" value="5" />
+      <div class="range-labels">
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+        <span>5</span>
+        <span>6</span>
+        <span>7</span>
+        <span>8</span>
+        <span>9</span>
+        <span>10</span>
+      </div>
+    </div>
+
+    <a href="https://calendly.com/auingermelvin" target="_blank" class="main-button">🚀 Termin buchen</a>
+  </div>
+
+  <script>
+    const slider = document.getElementById("motivationSlider");
+    const bubble = document.getElementById("valueBubble");
+
+    function setBubble(val) {
+      const percent = (val - slider.min) / (slider.max - slider.min);
+      bubble.style.left = `calc(${percent * 100}% - 20px)`;
+      bubble.textContent = val;
+    }
+
+    slider.addEventListener("input", () => {
+      setBubble(slider.value);
+    });
+
+    setBubble(slider.value);
+  </script>
+</body>
+</html>
